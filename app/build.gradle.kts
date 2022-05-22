@@ -92,16 +92,18 @@ android {
     }
 
     packagingOptions {
-        resources.excludes.addAll(listOf(
-            "META-INF/DEPENDENCIES",
-            "LICENSE.txt",
-            "META-INF/LICENSE",
-            "META-INF/LICENSE.txt",
-            "META-INF/README.md",
-            "META-INF/NOTICE",
-            "META-INF/*.kotlin_module",
-            "META-INF/*.version",
-        ))
+        resources.excludes.addAll(
+            listOf(
+                "META-INF/DEPENDENCIES",
+                "LICENSE.txt",
+                "META-INF/LICENSE",
+                "META-INF/LICENSE.txt",
+                "META-INF/README.md",
+                "META-INF/NOTICE",
+                "META-INF/*.kotlin_module",
+                "META-INF/*.version",
+            ),
+        )
     }
 
     dependenciesInfo {
@@ -263,13 +265,15 @@ dependencies {
     implementation(libs.bundles.shizuku)
 
     // Tests
-    testImplementation(libs.junit)
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
-    androidTestImplementation("androidx.test:runner:1.4.0")
-    androidTestImplementation("androidx.test:rules:1.4.0")
     androidTestImplementation(libs.barista) {
         exclude(group = "org.jetbrains.kotlin")
     }
+    androidTestImplementation(libs.espressocontrib)
+    androidTestImplementation(libs.espressocore)
+    androidTestImplementation(libs.espressointents)
+    androidTestImplementation(libs.testrules)
+    androidTestImplementation(libs.testrunner)
+    testImplementation(libs.junit)
 
     // For detecting memory leaks; see https://square.github.io/leakcanary/
     // debugImplementation(libs.leakcanary.android)
@@ -297,7 +301,7 @@ tasks {
             "-opt-in=coil.annotation.ExperimentalCoilApi",
             "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
             "-opt-in=androidx.compose.ui.ExperimentalComposeUiApi",
-            "-opt-in=androidx.compose.foundation.ExperimentalFoundationApi"
+            "-opt-in=androidx.compose.foundation.ExperimentalFoundationApi",
         )
     }
 
