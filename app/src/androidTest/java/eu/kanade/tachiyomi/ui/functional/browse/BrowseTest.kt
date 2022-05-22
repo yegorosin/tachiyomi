@@ -26,7 +26,7 @@ class BrowseTest {
     }
 
     @Test
-    fun openArrival() {
+    fun openBrowseTab() {
         app {
             openBrowse {
                 assertBrowseTabWasShown()
