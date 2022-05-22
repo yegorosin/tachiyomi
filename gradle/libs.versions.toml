@@ -8,6 +8,7 @@ flowbinding_version = "1.2.0"
 shizuku_version = "12.1.0"
 sqldelight = "1.5.3"
 leakcanary = "2.9.1"
+espresso = "3.4.0"
 
 [libraries]
 android-shortcut-gradle = "com.github.zellius:android-shortcut-gradle-plugin:0.1.2"
@@ -52,6 +53,12 @@ coil-core = { module = "io.coil-kt:coil", version.ref = "coil_version" }
 coil-gif = { module = "io.coil-kt:coil-gif", version.ref = "coil_version" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil_version" }
 
+espressocontrib = { group = "androidx.test.espresso", name = "espresso-contrib", version.ref = "espresso" }
+espressocore = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+espressointents = { group = "androidx.test.espresso", name = "espresso-intents", version.ref = "espresso" }
+testrunner = "androidx.test:runner:1.4.0"
+testrules = "androidx.test:rules:1.4.0"
+
 subsamplingscaleimageview = "com.github.tachiyomiorg:subsampling-scale-image-view:846abe0"
 image-decoder = "com.github.tachiyomiorg:image-decoder:7481a4a"
 
@@ -84,17 +91,17 @@ acra-http = "ch.acra:acra-http:5.9.3"
 firebase-analytics = "com.google.firebase:firebase-analytics-ktx:21.0.0"
 
 aboutLibraries-gradle = { module = "com.mikepenz.aboutlibraries.plugin:aboutlibraries-plugin", version.ref = "aboutlib_version" }
-aboutLibraries-compose = { module = "com.mikepenz:aboutlibraries-compose", version.ref ="aboutlib_version" }
+aboutLibraries-compose = { module = "com.mikepenz:aboutlibraries-compose", version.ref = "aboutlib_version" }
 
 shizuku-api = { module = "dev.rikka.shizuku:api", version.ref = "shizuku_version" }
 shizuku-provider = { module = "dev.rikka.shizuku:provider", version.ref = "shizuku_version" }
 
-leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", version.ref ="leakcanary" }
-leakcanary-plumber = { module = "com.squareup.leakcanary:plumber-android", version.ref ="leakcanary" }
+leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanary" }
+leakcanary-plumber = { module = "com.squareup.leakcanary:plumber-android", version.ref = "leakcanary" }
 
-sqldelight-android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref ="sqldelight" }
-sqldelight-coroutines = { module = "com.squareup.sqldelight:coroutines-extensions-jvm", version.ref ="sqldelight" }
-sqldelight-android-paging = { module = "com.squareup.sqldelight:android-paging3-extensions", version.ref ="sqldelight" }
+sqldelight-android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqldelight" }
+sqldelight-coroutines = { module = "com.squareup.sqldelight:coroutines-extensions-jvm", version.ref = "sqldelight" }
+sqldelight-android-paging = { module = "com.squareup.sqldelight:android-paging3-extensions", version.ref = "sqldelight" }
 
 junit = "org.junit.jupiter:junit-jupiter:5.8.2"
 barista = "com.adevinta.android:barista:4.2.0"
@@ -111,5 +118,5 @@ conductor = ["conductor-core", "conductor-viewpager", "conductor-support-prefere
 shizuku = ["shizuku-api", "shizuku-provider"]
 
 [plugins]
-kotlinter = { id = "org.jmailen.kotlinter", version = "3.10.0"}
-versionsx = { id = "com.github.ben-manes.versions", version = "0.42.0"}
+kotlinter = { id = "org.jmailen.kotlinter", version = "3.10.0" }
+versionsx = { id = "com.github.ben-manes.versions", version = "0.42.0" }
